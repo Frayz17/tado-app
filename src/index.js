@@ -1,25 +1,9 @@
 import React from 'react'
-import ReactDom from 'react-dom'
-import ToDoList from './components/ToDoList'
-import AppHeader from './components/AppHeader'
-import SearchPanel from './components/SearchPanel'
+import ReactDOM from 'react-dom'
 
-const App = () => {
-  const todoData = [
-    { item: 'drink coffe', important: false },
-    { item: 'make tea', important: false },
-    { item: 'learn react', important: true }
-  ]
+import App from './components/app'
 
-  return (
-    <div>
-      <AppHeader />
-      <SearchPanel />
-      <ToDoList
-        todoData={todoData}
-      />
-    </div>
-  )
-}
+import './index.css'
 
-ReactDom.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />,
+  document.getElementById('root'))
